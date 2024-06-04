@@ -7,7 +7,7 @@ export default function cleanSet(set, startString) {
   }
   const stringArray = Array.from(set);
   return stringArray
-    .filter((e) => e.startsWith(startString))
+    .filter((e) => typeof e === 'string' && e.startsWith(startString))
     .map((a) => a.replace(startString, ''))
     .join('-');
 }
