@@ -1,5 +1,4 @@
- function displayMessage(argument)
-{
-    process.stdout.write(argument)
- }
+function displayMessage(argument) {
+  console.log(argument);
+}
 module.exports = displayMessage;
