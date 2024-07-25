@@ -14,7 +14,7 @@ function calculateNumber(type, a, b) {
     }
     return roundedA / roundedB;
   }
-  throw new Error('Invalid type');
+  throw new Error('error');
 }
 
 module.exports = calculateNumber;
