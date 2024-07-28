@@ -66,7 +66,7 @@ app.on('request', (req, res) => {
       .catch((error) => {
         const errorResponse = ['This is the list of our students'];
         errorResponse.push(
-          error instanceof Error ? error.message : error.toString(),
+          error instanceof Error ? error.message : error.toString()
         );
         res.setHeader('Content-Type', 'text/plain');
         res.setHeader('Content-Length', errorResponse.length);
