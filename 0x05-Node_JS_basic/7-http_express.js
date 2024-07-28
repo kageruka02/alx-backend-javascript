@@ -55,7 +55,11 @@ app.get('/students', (_, res) => {
       res.status(200).send(responseText);
     })
     .catch((error) => {
-      res.status(200).send(error);
+      const responseParts = ['This is the list of our students'];
+      responseParts.push(
+        error instanceof Error ? error.message : error.toString(),
+      );
+      res.status(500).send(responseParts.join('\n'));
     });
 });
 app.listen(port, (error) => {
