@@ -26,7 +26,7 @@ function countStudents(filePath) {
           .filter((e) => e.field === fields[i])
           .map((e) => e.firstname);
         console.log(
-          `Number of students in ${fields[i]}. ${
+          `Number of students in ${fields[i]}: ${
             division.length
           }. List: ${division.join(', ')}`,
         );
